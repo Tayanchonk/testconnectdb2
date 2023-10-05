@@ -23,6 +23,7 @@ RUN tar -xzf v11.5.8_linuxx64_odbc_cli.tar.gz -C /usr/src/app && \
 # Install project dependencies
 RUN npm install
 
+COPY db2consv_as.lic /node_modules/ibm_db/installer/clidriver/license/
 # Copy all source code to the working directory
 COPY . .
 
